@@ -24,6 +24,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatDialogModule} from '@angular/material/dialog';
 import { EditUserComponent } from './edit-user/edit-user.component';
+import { DeleteUserComponent } from './delete-user/delete-user.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { EditUserComponent } from './edit-user/edit-user.component';
     ChooseUserComponent,
     AddUserComponent,
     EditUserComponent,
+    DeleteUserComponent,
 
   ],
   imports: [

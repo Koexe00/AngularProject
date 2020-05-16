@@ -7,6 +7,7 @@ import {ListAllComponent} from './list-all/list-all.component';
 import {ChooseUserComponent} from './choose-user/choose-user.component';
 import {AddUserComponent} from './add-user/add-user.component';
 import {EditUserComponent} from './edit-user/edit-user.component';
+import {DeleteUserComponent} from './delete-user/delete-user.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'userslist', pathMatch: 'full'},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'userschoose/:id', component: ChooseUserComponent},
   {path: 'useradd', component: AddUserComponent},
   {path: 'useredit/:id', component: EditUserComponent},
+  {path: 'userdelete/:id', component: DeleteUserComponent},
 ];
 
 @NgModule({

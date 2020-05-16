@@ -15,13 +15,16 @@ export class EditUserComponent implements OnInit {
   currentimage: string;
   public img = image;
   @Input() person: Person;
+  public load: boolean;
 
   constructor(private route: ActivatedRoute, private service: MyReceiverService) { }
+
 
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id');
     this.service.getOnePersonByID(this.id).subscribe(value => {
       this.person = value;
+      this.load = true;
     }, error => {
       console.log('ERROR');
     });

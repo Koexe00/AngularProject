@@ -1,4 +1,6 @@
+<div *ngIf="load">
 <div class="background2">
+
   <form (ngSubmit)="submitForm()" #Form="ngForm">
 
     <mat-form-field>
@@ -33,4 +35,5 @@
       <button [disabled]="!Form.form.valid" type="submit" mat-button color="warn"> Edit </button>
     </div>
   </form>
+</div>
 </div>
