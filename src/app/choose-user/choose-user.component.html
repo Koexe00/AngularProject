@@ -2,7 +2,8 @@
   <mat-expansion-panel-header>
     {{person.name+" "+person.surname+", Wiek: "+person.age}}
   </mat-expansion-panel-header>
-
   {{person.description}}
-
+  <div mat-dialog-actions>
+    <button type="submit" mat-button color="warn" [routerLink]="['/useredit', person.id]"> Edit </button>
+  </div>
 </mat-expansion-panel>
