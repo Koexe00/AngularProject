@@ -1,3 +1,4 @@
+<div *ngIf="load">
 <mat-expansion-panel>
   <mat-expansion-panel-header>
     {{person.name+" "+person.surname+", Wiek: "+person.age}}
@@ -6,4 +7,8 @@
   <div mat-dialog-actions>
     <button type="submit" mat-button color="warn" [routerLink]="['/useredit', person.id]"> Edit </button>
   </div>
+  <div mat-dialog-actions>
+    <button type="submit" mat-button color="warn" [routerLink]="['/userdelete', person.id]"> Delete </button>
+  </div>
 </mat-expansion-panel>
+</div>
