@@ -1,0 +1,14 @@
+<mat-card class="tile-item-card">
+  <mat-card-header>
+    <div mat-card-avatar class="tile-item-header-image"></div>
+    <mat-card-title>{{person.name+" "+person.surname}}</mat-card-title>
+    <mat-card-subtitle>{{"Wiek: "+person.age}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="person.image" alt="Error of img">
+  <mat-card-content>
+    <p>
+      {{person.description}}
+    </p>
+  </mat-card-content>
+
+</mat-card>

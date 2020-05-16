@@ -1,0 +1,7 @@
+<div>
+  <mat-grid-list cols="3" rowHeight="1:1">
+    <mat-grid-tile *ngFor="let person of people" >
+      <app-tile-item [person]="person" [routerLink]="['/userschoose', person.id]"></app-tile-item>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

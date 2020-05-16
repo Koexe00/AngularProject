@@ -1,0 +1,37 @@
+<div class="background1">
+<form (ngSubmit)="submitForm()" #Form="ngForm">
+
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input required id="name" [(ngModel)]="person.name" name="name" #name='ngModel' matInput [placeholder]="person.name" value="{{person.name}}">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Surnname</mat-label>
+    <input required id="surname" [(ngModel)]="person.surname" name="surname" #surname='ngModel' matInput [placeholder]="person.surname" value="{{person.surname}}">
+  </mat-form-field>
+
+  <mat-form-field >
+    <mat-label>Age</mat-label>
+    <input required id="age" [(ngModel)]="person.age" name="age" type="number" #age='ngModel' matInput [placeholder]="person.age" value="{{person.age}}">
+  </mat-form-field>
+
+  <mat-form-field >
+    <mat-label>Description</mat-label>
+    <input required id="description" [(ngModel)]="person.description" name="description" #description='ngModel' matInput [placeholder]="person.description" value="{{person.description}}">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Image</mat-label>
+    <mat-select required #image="ngModel" id="image" name="image" [(ngModel)]="currentimage">
+      <mat-option *ngFor="let i of img" value="{{i.value}}">
+        {{i.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+<div mat-dialog-actions>
+
+  <button [disabled]="!Form.form.valid" type="submit" mat-button color="warn"> Add </button>
+</div>
+</form>
+</div>
